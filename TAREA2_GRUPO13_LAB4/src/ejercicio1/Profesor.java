@@ -1,11 +1,10 @@
 package ejercicio1;
 
-public class Profesor extends Empleado {
+public class Profesor extends Empleado implements Comparable<Profesor>{
 	
 	private String cargo;
 	private int antiguedadDocente;
 
-<<<<<<< HEAD
 
 	public Profesor() {
 		super();
@@ -24,24 +23,53 @@ public class Profesor extends Empleado {
 		return "Id: " + getId() + " - Nombre: " + getNombre() + " -Edad: " + getEdad() +
 			   " - Cargo: " + cargo + " - AntiguedadDocente: " + antiguedadDocente;
 	}
+	
+	
 
+	@Override
+	public int compareTo(Profesor o) {
+	
+		//ORDENAMIENTO por ID de > a <
+		if(o.getId() == this.getId())
+			return 0;
+		
+		if (o.getId()<this.getId())
+		{
+			return 1;
+		}		
+		return -1;
+		
+	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + antiguedadDocente;
+		result = prime * result + ((cargo == null) ? 0 : cargo.hashCode());
+		return result;
+	}
 
-}
-=======
-
-	public Profesor() {
-		super();
-		cargo= "sin nombre";
-		antiguedadDocente=0;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Profesor other = (Profesor) obj;
+		if (antiguedadDocente != other.antiguedadDocente)
+			return false;
+		if (cargo == null) {
+			if (other.cargo != null)
+				return false;
+		} else if (!cargo.equals(other.cargo))
+			return false;
+		return true;
 	}
 	
-	public Profesor(String Nombre, int Edad, String Cargo, int Antiguedad) {
-		super (Nombre, Edad);
-		cargo= Cargo;
-		antiguedadDocente= Antiguedad;
-	}
+	
 
 }
 
->>>>>>> a1e7e7e3997b8d8ffa880c8261f195df9dbe1742
