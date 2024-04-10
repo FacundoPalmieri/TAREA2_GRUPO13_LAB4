@@ -32,7 +32,7 @@ private int temperaturaRecomendada;
 	
 	@Override
 	public String toString() {
-		return "Producto Congelado: Temperatura recomendada:" + temperaturaRecomendada + ", " + super.toString();
+		return "Producto Congelado: Temperatura recomendada " + temperaturaRecomendada + ", " + super.toString();
 	}
 }
 	

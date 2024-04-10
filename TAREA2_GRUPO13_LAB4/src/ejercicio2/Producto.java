@@ -37,7 +37,7 @@ public class Producto {
 	}	
 	
 	public String toString() {
-		return "Fecha de caducidad=" + this.fechaDeCaducidad + ", Numero de lote=" + this.numeroDeLote;
+		return "Fecha de caducidad: " + this.fechaDeCaducidad + ", Numero de lote: " + this.numeroDeLote;
 	}
 	
 }

@@ -4,36 +4,22 @@ public class ProductosRefrigerados extends Producto {
 	private int temperaturaCongelacionRecomendada;
 	private String codigoOrganismoSupervisor;
 	
-	public String getCodigoOrganismoSupervisor() {
-		return codigoOrganismoSupervisor;
-	}
-
-	public void setCodigoOrganismoSupervisor(String codigoOrganismoSupervisor) {
-		this.codigoOrganismoSupervisor = codigoOrganismoSupervisor;
-	}
-
-	@Override
-	public String toString() {
-		return "ProductosRefrigerados [temperaturaCongelacionRecomendada=" + temperaturaCongelacionRecomendada
-				+ ", codigoOrganismoSupervisor=" + codigoOrganismoSupervisor + "]";
-	}
-
 	//Constructors
 	public ProductosRefrigerados() {
-		
+			
 		super();
 		this.temperaturaCongelacionRecomendada = -1;
+		this.codigoOrganismoSupervisor = "sin dato";	
+		}
 		
-	}
-	
-	public ProductosRefrigerados(int temperaturaCongelacionRecomendada) {
-		
-		
+	public ProductosRefrigerados(int temperaturaCongelacionRecomendada, String CodigoOrganismo) {
+			
+			
 		this.temperaturaCongelacionRecomendada = temperaturaCongelacionRecomendada;
-		
+		this.codigoOrganismoSupervisor = CodigoOrganismo;	
 	}
 
-	// getters, setters
+		// getters, setters
 
 	public int getTemperaturaCongelacionRecomendada() {
 		return temperaturaCongelacionRecomendada;
@@ -45,5 +31,20 @@ public class ProductosRefrigerados extends Producto {
 	}
 
 
-	
+	public String getCodigoOrganismoSupervisor() {
+		return codigoOrganismoSupervisor;
+	}
+
+	public void setCodigoOrganismoSupervisor(String codigoOrganismoSupervisor) {
+		this.codigoOrganismoSupervisor = codigoOrganismoSupervisor;
+	}
+
+		
+	//Método ToString
+	@Override
+	public String toString() {
+		return "ProductosRefrigerados: Temperatura de congelacion recomendada " + temperaturaCongelacionRecomendada
+				+ ", código Organismo Supervisor " + codigoOrganismoSupervisor + "]";
+	}
+
 }
