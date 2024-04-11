@@ -3,7 +3,6 @@ package ejercicio3;
 public class Polideportivo implements InstalacionDeportiva, Edificio{
 
 	private String nombre;
-    private double superficie;
 
     public Polideportivo(String nombre, double superficie) {
         this.nombre = nombre;
