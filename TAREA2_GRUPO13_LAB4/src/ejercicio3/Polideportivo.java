@@ -4,9 +4,8 @@ public class Polideportivo implements InstalacionDeportiva, Edificio{
 
 	private String nombre;
 
-    public Polideportivo(String nombre, double superficie) {
+    public Polideportivo(String nombre) {
         this.nombre = nombre;
-        this.superficie = superficie;
     }
         
 	@Override
