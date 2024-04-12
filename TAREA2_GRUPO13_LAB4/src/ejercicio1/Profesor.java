@@ -17,6 +17,23 @@ public class Profesor extends Empleado implements Comparable<Profesor>{
 		cargo= Cargo;
 		antiguedadDocente= Antiguedad;
 	}
+	
+	
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+	public int getAntiguedadDocente() {
+		return antiguedadDocente;
+	}
+
+	public void setAntiguedadDocente(int antiguedadDocente) {
+		this.antiguedadDocente = antiguedadDocente;
+	}
 
 	@Override
 	public String toString() {

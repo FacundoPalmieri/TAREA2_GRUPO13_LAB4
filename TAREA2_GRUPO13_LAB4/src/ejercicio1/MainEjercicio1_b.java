@@ -1,5 +1,6 @@
 package ejercicio1;
 
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class MainEjercicio1_b {
@@ -24,10 +25,19 @@ public class MainEjercicio1_b {
 		
 			System.out.println("Listado de Profesores ordenado: ");
 			
+			
+			Iterator<Profesor> itr= listaProfesores.iterator();
+			while(itr.hasNext()) {
+				Profesor prof = (Profesor)itr.next();
+				System.out.println(prof.toString());
+				itr.remove();
+			}
+			
+			/*
 			for (Profesor x : listaProfesores) {
 				System.out.println(x.toString());
 			}
-			
+			*/
 			
 			//Punto 7 - Ejercicio 1
 			

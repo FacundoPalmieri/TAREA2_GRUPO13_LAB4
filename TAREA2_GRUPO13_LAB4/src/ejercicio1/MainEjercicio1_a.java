@@ -1,6 +1,7 @@
 package ejercicio1;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 public class MainEjercicio1_a {
 
@@ -21,10 +22,17 @@ public class MainEjercicio1_a {
 	
 		System.out.println("Listado de Profesores: ");
 
-		for(int i=0; i<listaProfesores.size(); i++)
+		ListIterator<Profesor> it = listaProfesores.listIterator();
+		while(it.hasNext()) {
+			Profesor prof = it.next();
+			System.out.println(prof.toString());
+			it.remove();
+		}
+		
+		/*for(int i=0; i<listaProfesores.size(); i++)
 		{
 			System.out.println(listaProfesores.get(i).toString());
-		}
+		}*/
 		
 	
 		
