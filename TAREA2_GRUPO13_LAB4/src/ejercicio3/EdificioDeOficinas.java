@@ -1,6 +1,6 @@
 package ejercicio3;
 
-public class EdificioDeOficinas extends Edificio{
+public class EdificioDeOficinas extends Edificio implements ITipoInstalacion{
 	
 	private int oficinas;
 	
@@ -10,8 +10,8 @@ public class EdificioDeOficinas extends Edificio{
 	};
 	
 
-	public EdificioDeOficinas(int oficinas,double SuperficieEdificio, ITipoInstalacion TipoInstalacion) {
-		super(SuperficieEdificio,TipoInstalacion );
+	public EdificioDeOficinas(int oficinas,double SuperficieEdificio) {
+		super(SuperficieEdificio);
 		this.oficinas = oficinas;
 	}
 
@@ -23,7 +23,13 @@ public class EdificioDeOficinas extends Edificio{
 
 	@Override
 	public String toString() {
-		return "EdificioDeOficinas [oficinas=" + oficinas + "]";
+		return "EdificioDeOficinas - Superficie= "+getSuperficieEdificio()+" - Cantidad de oficinas= " + oficinas + " - Tipo de Instalacion: "+getTipoDeInstalacion();
+	}
+
+
+	@Override
+	public int getTipoDeInstalacion() {
+		return 1;
 	}
 
 
