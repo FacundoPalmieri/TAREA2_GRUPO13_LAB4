@@ -10,9 +10,10 @@ public class EdificioDeOficinas extends Edificio implements ITipoInstalacion{
 	};
 	
 
-	public EdificioDeOficinas(int oficinas,double SuperficieEdificio) {
-		super(SuperficieEdificio);
-		this.oficinas = oficinas;
+//	public EdificioDeOficinas(int oficinas,double SuperficieEdificio) {
+	public EdificioDeOficinas(double SuperficieEdificio) {
+	super(SuperficieEdificio);
+	//	this.oficinas = oficinas;
 	}
 
 
@@ -23,7 +24,7 @@ public class EdificioDeOficinas extends Edificio implements ITipoInstalacion{
 
 	@Override
 	public String toString() {
-		return "EdificioDeOficinas - Superficie= "+getSuperficieEdificio()+" - Cantidad de oficinas= " + oficinas + " - Tipo de Instalacion: "+getTipoDeInstalacion();
+		return "EdificioDeOficinas - Superficie= "+getSuperficieEdificio()+" - Cantidad de oficinas= " + ((int)getSuperficieEdificio()/16)+" de 4mts2" + " - Tipo de Instalacion: "+getTipoDeInstalacion();
 	}
 
 
